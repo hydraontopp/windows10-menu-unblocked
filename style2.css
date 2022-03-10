@@ -1,0 +1,57 @@
+#background{
+  margin:0;
+  width:100%;
+  height:100%;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+body{
+  margin:0;
+}
+.icon{
+  width:60px;
+  height:60px;
+  position:absolute;
+}
+
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
+div{
+  width:100px;
+  position:absolute;
+}
+
+p{
+  margin-top:60px;
+  text-align:center;
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  font-weight: 1000;
+  -webkit-text-stroke: 1px black;
+}
+img{
+  vertical-align:middle;
+  margin-left:20px;
+}
+#mycomputer{
+  top:40px;
+  left:30px;
+}
+#trashbin{
+  top:140px;
+  left:30px;
+}
+#explorer{
+  top:240px;
+  left:30px;
+}
+#controlpanel{
+  top:340px;
+  left:30px;
+}

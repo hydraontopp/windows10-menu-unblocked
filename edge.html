@@ -1,0 +1,174 @@
+<link href='style.css' rel='stylesheet' type='text/css' />
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+	background-color: white;
+}
+
+/* Incongito background is black */
+.tabcontent .private {
+	background-color: black;
+	color: white;
+}
+.tablinks .private .active {
+	text-decoration: underline;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  font-size: 28px;
+}
+.namebar:hover, .namebar {
+	background-color: #f1f1f1;
+	cursor: url(bname.png), pointer;
+}
+
+.topright:hover {color: red;}
+a {
+	text-decoration: none;
+	font-family: 'Times Roman';
+	color: black;
+	font-weight: bold;
+	font-size: 14pt;
+}
+img.fav-icon {
+	height: 34px;
+	width: 34px;
+	depth: 0px;
+}
+</style>
+</head>
+<body>
+<div class="tab">
+	<button class='tablinks namebar'><b>Edge</b></button>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen" contenteditable>Tab1</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')" contenteditable>Tab2</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')" contenteditable>Tab3</button>
+	<button class="tablinks" onclick="openCity(event, 'Delhi')" contenteditable>Tab4</button>
+	<button class="tablinks" onclick="openCity(event, 'Washington')" contenteditable>Tab5</button>
+	<button class="tablinks private" onclick="openCity(event, 'Freneau')" style='background-color: black; color: white;' title='Private Browsing Mode'>Incongito</button>
+	<button class="tablinks private" onclick="openCity(event, 'Ottawa')" style='background-color: black; color: white;' title='Private Browsing Mode'>Incongito</button><br><br>
+	<p><img src='http://icons.iconarchive.com/icons/mazenl77/I-like-buttons-3a/512/Cute-Ball-Favorites-icon.png' class='fav-icon' style='cursor: help;' title='Favourites'></img> <b style='font-size: 30pt;'> | </b> <a href='edgehome.html' target='iframe_a'><img src='https://cdn2.iconfinder.com/data/icons/web-iconset-pt-1/100/047_-_homepage-512.png' class='fav-icon'></img>Home</a> <a href='calc.htm' target='iframe_a'><img src='https://winaero.com/blog/wp-content/uploads/2019/10/Windows-10-Calculator-Fluent-Icon-Big-256.png' class='fav-icon'></img>Calculator</a>
+	 <a href='https://bing.com' target='iframe_a'><img src='https://sweetiq.com/wp-content/uploads/logos/logo-bing.png' class='fav-icon'></img>Bing</a>
+</div>
+
+<div id="London" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <iframe src='edgehome.html' style='width:100%;height:700px;' name='iframe_a'>
+	<h1>Microsoft Edge Was Unable To Open This Page</h1>
+	<p>Please check the web address, your internet connection, or try refreshing the page.</p>
+	</iframe>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <iframe src='edgehome.html' style='width:100%;height:700px;' name='iframe_a'>
+	<h1>Microsoft Edge Was Unable To Open This Page</h1>
+	<p>Please check the web address, your internet connection, or try refreshing the page.</p>
+	</iframe> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <iframe src='edgehome.html' style='width:100%;height:700px;' name='iframe_a'>
+	<h1>Microsoft Edge Was Unable To Open This Page</h1>
+	<p>Please check the web address, your internet connection, or try refreshing the page.</p>
+	</iframe>
+</div>
+
+<div id="Delhi" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <iframe src='edgehome.html' style='width:100%;height:700px;' name='iframe_a'>
+	<h1>Microsoft Edge Was Unable To Open This Page</h1>
+	<p>Please check the web address, your internet connection, or try refreshing the page.</p>
+	</iframe>
+</div>
+
+<div id="Washington" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <iframe src='edgehome.html' style='width:100%;height:700px;' name='iframe_a'>
+	<h1>Microsoft Edge Was Unable To Open This Page</h1>
+	<p>Please check the web address, your internet connection, or try refreshing the page.</p>
+	</iframe>
+</div>
+
+<div id="Freneau" class="tabcontent private">
+  <span onclick="this.parentElement.style.display='none'" class="topright" name='iframe_a'>&times</span>
+  <iframe src='edgehome.html' style='width:100%;height:700px;'>
+	<h1>Microsoft Edge Was Unable To Open This Page</h1>
+	<p>Please check the web address, your internet connection, or try refreshing the page.</p>
+	<p>You can also try <button onclick='openCity(event, "London");' style='font-family: calibri; background-color: transparent; color: black; border: none;'>exiting incongito</button></p>
+	</iframe>
+</div>
+
+<div id="Ottawa" class="tabcontent private">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <iframe src='edgehome.html' style='width:100%;height:700px;' name='iframe_a'>
+	<h1>Microsoft Edge Was Unable To Open This Page</h1>
+	<p>Please check the web address, your internet connection, or try refreshing the page.</p>
+	<p>You can also try <button onclick='openCity(event, "London");' style='font-family: calibri; background-color: transparent; color: black; border: none;'>exiting incongito</button></p>
+	</iframe>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

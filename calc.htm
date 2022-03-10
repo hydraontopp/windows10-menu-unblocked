@@ -1,0 +1,31 @@
+<form name="calculator" >
+			<br><input type="textfield" id='result' name="ans" value="" placeholder='Solution'><br>
+<input type="button" value="1" onClick="document.calculator.ans.value+='1'" title='One'>
+<input type="button" value="2" onClick="document.calculator.ans.value+='2'" title='Two'>
+<input type="button" value="3" onClick="document.calculator.ans.value+='3'" title='Three'><br>
+<input type="button" value="4" onClick="document.calculator.ans.value+='4'" title='Four'>
+<input type="button" value="5" onClick="document.calculator.ans.value+='5'" title='Five'>
+<input type="button" value="6" onClick="document.calculator.ans.value+='6'" title='Six'><br>
+<input type="button" value="7" onClick="document.calculator.ans.value+='7'" title='Seven'>
+<input type="button" value="8" onClick="document.calculator.ans.value+='8'" title='Eight'>
+<input type="button" value="9" onClick="document.calculator.ans.value+='9'" title='Nine'><br>
+<input type='button' value='.' onClick='document.calculator.ans.value+="."' title='Decimal Point'>
+<input type="button" value="0" onClick="document.calculator.ans.value+='0'" title='Zero'>
+<input type='button' value='–' onClick='document.calculator.ans.value+="0-"' title='Negative'><br>
+<input type="button" value="-" onClick="document.calculator.ans.value+='-'" title='Minus'>
+<input type="button" value="+" onClick="document.calculator.ans.value+='+'" title='Plus'>
+<input type="button" value="&times;" onClick="document.calculator.ans.value+='*'" title='Times'><br>
+
+<input type="button" value="τ" onClick="document.calculator.ans.value+='6.283185307179'" title='Tau, the circumference of a circle divided by the radius, approximately 6.283185307179...'>
+<input type="button" value="√2" onClick="document.calculator.ans.value+='1.414213562373'" title="Sqrt 2, a square's perimiter divided by its diagonal length, approximately 1.414213562373...">
+<input type="button" value="e" onClick="document.calculator.ans.value+='2.718281828459'" title="E, a mathematical constant that helps with numbers like 14 billion, writing it out as 1.4*e10, approximately 2.718281828459...">
+<br>
+<input type="button" value="mod" onClick="document.calculator.ans.value+='%'" title='Mod, returns remainder of division'>
+<input type="button" value="÷" onClick="document.calculator.ans.value+='/'" title='Division'>
+<input type="button" value=" " onClick="document.calculator.ans.value+='0+'" title='Positive Sign'>
+<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)" title='Equals'>
+<input type="reset" value="AC" title='All Clear'>
+
+
+
+</form>

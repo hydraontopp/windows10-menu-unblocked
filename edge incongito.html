@@ -1,0 +1,97 @@
+
+<div class="row">
+  <div class="left" style="background-color:powderblue; border: 2px solid black;">
+    <h2 style='color: white;'>Favourites</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="https://e11.ebp11.repl.co/search" target='iframe_a'>Home<br></a></li>
+      <li><a href="https://bing.com/" target='iframe_a'>Bing</a></li>
+      <li><a href="google.html" target='iframe_a'>Google</a></li>
+      <li><a href="https://en.m.wikipedia.org/" target='iframe_a'>Wikipedia</a></li>
+      <li><a href="https://en.m.wiktionary.org/" target='iframe_a'>Dictionary</a></li>
+      <li><a href="https://thesaurus.com/" target='iframe_a'>Thesaurus</a></li>
+      <li><a href="https://bestoffice.ebp11.repl.co" target='iframe_a'>BestOffice</a></li>
+      <li><a href="https://e11.ebp11.repl.co" target='iframe_a'>BestPenguin X Archived</a></li>
+      <li><a href="https://www.example.com" target='iframe_a'>Example domain</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:lightgrey; border: 2px solid black; overflow: auto;">
+		<iframe src='https://bing.com' name='iframe_a' style='height: 1050px; width: 100%;'></iframe><br><!--<h1>Quantum Web Browser</h1>
+		<p>With BestPenguin RocketPro, you can enjoy desktop-class browsing and also get more features than Internet Explorer 12 &amp; 15 offered. There is also a calculator have you need to do math quickly.</p>
+		<h2>Calculator</h2>-->
+		
+	</div>
+    <script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+	<style>
+body {
+  font-family: Calibri;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>

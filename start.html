@@ -1,0 +1,89 @@
+
+<link href='style.css' rel='stylesheet' type='text/css' />
+<div id="myModal" class="modal">
+<style>
+	button img {
+		height: 15px;
+		width: 15px;
+	}
+	div.modal-content {
+		color: white;
+		font-family: 'Times Newer Roman';
+	}
+	.icon {
+		height: 34px;
+		width: 34px;
+	}
+	.tsbtn {
+		width: 30%;
+		height: 200px;
+		border: 8px solid darkblue;
+	}
+	.thebuttons {
+		font-family: Calibri;
+	}
+</style>
+  <!-- Modal content -->
+  <div class="modal-content">
+		
+    <span class="close" onclick='window.open("index.html", "_self");'>		
+<button disabled='disabled'>_</button><button>&times;</button></span>
+<button onclick='confirm("Are you sure you want to turn off the computer?");window.open("off.htm", "_self");' style='float: right;' id='offbtn'><img src='https://rocket.ebp11.repl.co/turnoff.png'></button><br><br><center>
+	<h1>Windows Apps</h1></center>
+	<div class='thebuttons'>
+		<a href='bing.html'><button class='tsbtn' style='background-color: teal;'>
+		<img src='https://1000logos.net/wp-content/uploads/2017/12/bing-emblem.jpg' class='icon'><br>Bing
+		</button></a>
+		<a href='wikipedia.html'><button class='tsbtn' style='background-color: grey;'>
+		<img src='https://rocket.ebp11.repl.co/music.png' class='icon'><br><h7 style='color: black;'>Wikipedia</h7>
+		</button></a>
+		<a href='cortana.html'><button class='tsbtn' style='background-color: black;'>
+		<img src='https://upload.wikimedia.org/wikipedia/commons/f/f9/Microsoft_Cortana_transparent.svg' class='icon'><br><h7 style='color: white;'>Cortana</h7>
+		</button></a><br>
+		<a href='edge.htm'><button class='tsbtn' style='background-color: powderblue;'>
+		<img src='https://vignette.wikia.nocookie.net/logopedia/images/a/aa/Edge_app_icon.png/revision/latest?cb=20190118025506' class='icon'><br>Edge
+		</button></a>
+  </div>
+
+</div>
+
+<script>
+const menu = document.querySelector(".menu");
+let menuVisible = false;
+
+const toggleMenu = command => {
+  menu.style.display = command === "show" ? "block" : "none";
+  menuVisible = !menuVisible;
+};
+
+const setPosition = ({ top, left }) => {
+  menu.style.left = `${left}px`;
+  menu.style.top = `${top}px`;
+  toggleMenu("show");
+};
+
+window.addEventListener("click", e => {
+  if(menuVisible)toggleMenu("hide");
+});
+
+window.addEventListener("contextmenu", e => {
+  e.preventDefault();
+  const origin = {
+    left: e.pageX,
+    top: e.pageY
+  };
+  setPosition(origin);
+  return false;
+});
+
+</script>
+<div class="menu">
+  <ul class="menu-options">
+    <li class="menu-option">Open Start Menu</li>
+    <li class="menu-option">Back</li>
+    <li class="menu-option">Forward</li>
+    <li class="menu-option">Refresh</li>
+    <li class="menu-option">Turn off</li>
+ <li class="menu-option">Open Web Browser</li>
+  </ul>
+</div>

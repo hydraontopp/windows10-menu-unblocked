@@ -1,0 +1,58 @@
+
+<link href='style.css' rel='stylesheet' type='text/css' />
+<div id="myModal" class="modal">
+	<title>Title</title>
+<style>
+	button img {
+		height: 15px;
+		width: 15px;
+	}
+	div.modal-content {
+		color: white;
+		font-family: 'Times Newer Roman';
+	}
+</style>
+  <!-- Modal content -->
+  <div class="modal-content">
+		
+    <span class="close" onclick='window.open("index.html", "_self");'>		
+<button disabled='disabled' style='cursor: not-allowed;'>_</button><button>&times;</button></span>
+<button onclick='window.open("start.html", "_self");'><img src='https://techgage.com/wp-content/uploads/2014/04/Microsoft-Windows-XP-Flag-Logo-100x88.png' style='height: 60%;'></button>
+<input disabled type='text' value='C://Users/admin/desktop/My_Computer'></input>
+<button onclick='confirm("Are you sure you want to turn off the computer?");window.open("off.htm", "_self");' style='float: right;' id='offbtn'><img src='https://rocket.ebp11.repl.co/turnoff.png'></button><br><br><center>
+	<iframe style='width: 95%; height: 800px;' src='file_explorer.html'>Microsoft WINDOWS File Explorer is having trouble loading. Please check the internet connection or try again later. (or right now)</iframe>
+  </div>
+
+
+
+</div>
+<script>
+const menu = document.querySelector(".menu");
+let menuVisible = false;
+
+const toggleMenu = command => {
+  menu.style.display = command === "show" ? "block" : "none";
+  menuVisible = !menuVisible;
+};
+
+const setPosition = ({ top, left }) => {
+  menu.style.left = `${left}px`;
+  menu.style.top = `${top}px`;
+  toggleMenu("show");
+};
+
+window.addEventListener("click", e => {
+  if(menuVisible)toggleMenu("hide");
+});
+
+window.addEventListener("contextmenu", e => {
+  e.preventDefault();
+  const origin = {
+    left: e.pageX,
+    top: e.pageY
+  };
+  setPosition(origin);
+  return false;
+});
+
+</script>
